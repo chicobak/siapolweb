@@ -1,0 +1,179 @@
+/* Fondo con imagen y superposición */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('imagenes/siapolfondo.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+.logocontainer {
+  position: absolute;  /* Usa 'fixed' si quieres que siempre esté visible al hacer scroll */
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 1rem;       /* Opcional: agrega espacio interno */
+  z-index: 10;         /* Opcional: asegura que esté por encima de otros elementos */
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px #000000ec;
+}
+
+.logo-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.siapol-title {
+  font-size: 140px;
+  font-weight: bold;
+  color: #99ec2d;
+  line-height: 1;
+  text-shadow: 0 4px 15px #000000ec;
+}
+
+.siapol-subtitle {
+  font-size: 40px;
+  color: #fffafa;
+  font-weight: 400;
+  margin-top: 0.6rem;
+  line-height: 1.1;
+}
+
+/* Contenedor centrado */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Formulario minimalista */
+.login-form {
+  background: rgba(2, 32, 66, 0.5);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px #fcfbfbec;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  gap: 1.2rem;
+}
+
+.login-form h2 {
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.login-form input {
+  padding: 0.9rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fafbfc;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.login-form input:focus {
+  border: 1.5px solid #1976d2;
+}
+
+.login-form button {
+  padding: 0.9rem;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-form button:hover {
+  background: #125ea6;
+}
+
+.forgot {
+  text-align: right;
+  font-size: 0.95rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* Media query para pantallas pequeñas (celular) */
+@media (max-width: 600px) {
+  .logocontainer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .logo-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 10px auto;
+    
+    display: flex;
+  }
+
+  .logo-texts {
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .siapol-title {
+    font-size: 70px;
+    margin: 0 0 5px 0;
+  }
+
+  .siapol-subtitle {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .login-container {
+
+    margin-top: 150px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .login-form {
+    width: 90vw;
+    max-width: 400px;
+  }
+}
+
